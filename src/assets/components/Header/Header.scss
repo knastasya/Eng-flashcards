@@ -1,0 +1,35 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 12vh;
+    padding: 0 10vw 0 3vw;
+    background-color: rgba(219, 122, 122, 0.679);
+
+    &__logo-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 7vw;
+        margin-right: 1vw;
+    }
+
+    &__logo-text {
+        text-decoration: none;
+    }
+
+    &__text {
+        display: flex;
+        width: 20vw;
+        justify-content: space-between;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: rgb(154, 0, 0);
+    }
+}
+

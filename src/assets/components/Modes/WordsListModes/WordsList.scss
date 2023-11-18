@@ -1,0 +1,50 @@
+@import '../../../styles/variables.scss';
+
+.wordsList {
+    display: flex;
+    justify-content: center;
+    
+
+    &__header {
+        display: grid;
+        box-sizing: border-box;
+        grid-template-columns: repeat(4, 1fr);
+        width: 70vw;
+        border-right: 1px solid rgba(97, 97, 97, 0.431);
+        
+    }
+
+    &__item {
+        padding: 0.7vw;
+        border-bottom: 1px solid rgba(97, 97, 97, 0.431);
+        border-left: 1px solid rgba(97, 97, 97, 0.431);
+
+        &_btn, &_icon {
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 0.6vw;
+        }
+
+        &_img {
+            width: 1.5vw;
+            cursor: pointer;
+            margin-left: 1vw;
+        }
+
+
+
+    }
+
+    &__btn {
+        background-color: $button-color;
+        color: rgb(255, 255, 255);
+        border: none;
+        border-radius: 5px;
+        width: 10vw;
+        height: 5vh;
+        cursor: pointer;
+    }
+
+}
