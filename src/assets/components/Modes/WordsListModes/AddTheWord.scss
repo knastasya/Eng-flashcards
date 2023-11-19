@@ -1,0 +1,21 @@
+@import '../../../styles/variables.scss';
+
+.addTheWord {
+    display: none;
+    background-color: $input-color;
+    opacity: 0;
+    animation: ani 1s forwards;
+  }
+  
+  @keyframes ani {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+
+  input {
+    border-width: 0px;
+  }
+
+  input:focus {
+    outline: none;
+  }

@@ -3,8 +3,7 @@ import './SettingMode.scss';
 
 export default function SettingMode() {
     return (
-        <>
-        <div>Word Cards</div>
-        </>
+<>
+</>
     )
 }

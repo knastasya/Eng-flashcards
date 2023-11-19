@@ -11,13 +11,15 @@ import './App.scss';
 
 export default function App() { 
 
+
+
   return (
     <>
 <Router>
 <Header/>
     <Routes>
-      <Route path = "/" element = { <SettingMode/>}/>
-      <Route path = "/words" element = { <WordsList/> }/>
+      <Route path = "/" element = { <SettingMode/> }/>
+      {/* <Route path = "/words" element = { <WordsList/> }/> */}
       <Route path = "/practice" element = { <PracticeMode/> }/>
     </Routes>
 </Router>

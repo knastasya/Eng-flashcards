@@ -1,0 +1,119 @@
+@import '../../../styles/variables.scss'; 
+
+
+.practiceMode {
+    background-color: rgba(255, 222, 222, 0.311);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5vw 0;
+    height: 100vh;
+
+}
+.wordCard {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        width: 67vh;
+        height: 48vh;
+    
+        &__img{
+            height: 100%;
+            padding: 5%;
+        }
+
+        &__wordEng {
+            position: absolute;
+            top: 34%;
+            right: 37%;
+        
+            font-family: $default-font;
+            font-size: calc(( 100vw + 1280px ) / 67);
+        }
+
+        &__wordTrascrip {
+            position: absolute;
+            right: 42%;
+            bottom: 40%;
+
+            font-size: calc(( 100vw - 142px) / 71);
+            font-weight: 500;
+            color: rgb(105, 105, 105);
+        }
+
+        &__wordRus {
+            position: absolute;
+            right: 41%;
+            bottom: 25%;
+
+            font-size: calc(( 100vw - 142px) / 71);
+            font-weight: 500;
+            color: rgb(105, 105, 105);
+        }
+
+
+
+        &__check {
+            background-color: $button-color;
+            color: rgb(255, 255, 255);
+            border: none;
+            border-radius: 5px;
+            width: 10vw;
+            height: 5vh;
+            cursor: pointer;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            bottom: 38%;
+            right: 44%;
+
+            transition-duration: 0.4s;
+        }
+
+        &__check:hover {
+            width: 11vw;
+            transition: all 0.4s ease;
+        }
+        &__check:focus {
+            outline: none;
+            background-color: rgb(23,61,143);
+        }
+
+        &__answer-btn {
+            height: 5vw;
+        width: 15vw;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 45%;
+        margin-top: 2vw;
+    }
+
+    .knowBtn{
+        background-color: rgb(169, 212, 198);
+        
+    }
+    
+    .knowBtn:hover{
+        background-color: rgb(18, 164, 85);
+    }
+    
+    .dontKnowBtn {
+        background-color: rgb(229, 159, 159);
+    }
+    
+    .dontKnowBtn:hover {
+        background-color: rgb(243, 55, 61);
+    }

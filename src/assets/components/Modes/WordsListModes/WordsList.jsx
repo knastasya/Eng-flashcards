@@ -6,10 +6,10 @@ import deleteWord from '../../../images/deleteworld.png';
 // import saveEdit from '../../../images/save.png'
 
 
-
 export default function WordsList(props) {
 
-    return (
+    return ( 
+        <div className='containerWordList'>
         <div className='wordsList'>
             <div className='wordsList__header'>
         <span className='wordsList__item'>{props.english}</span>
@@ -23,6 +23,13 @@ export default function WordsList(props) {
         </span>
             </div>
         </div>
+        </div>
+        
     )
 }
+
+
+
+
+
 

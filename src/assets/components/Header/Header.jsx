@@ -13,7 +13,7 @@ export default function Header() {
             <Link to ='/' className='nav-container__link'>
                 <div className='nav-container__logo-container'>
             <img src={logo} alt="logo" className='nav-container__logo'/>
-            <p>ENG- <br/> FLASHCARDS</p>
+            <p className='nav-container__logo-text'><span className='nav-container__logo-text nav-container__logo-text_eng'>ENG ———— </span> <br/> FLASHCARDS</p>
             </div>
             </Link>
             </li>

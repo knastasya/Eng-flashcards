@@ -1,11 +1,16 @@
+@import '../../styles/variables.scss';
+
+
+
 .nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    width: 100vw;
     height: 12vh;
-    padding: 0 10vw 0 3vw;
-    background-color: rgba(219, 122, 122, 0.679);
+    padding: 0 15vw;
+    background-color: $basic-color;
 
     &__logo-container {
         display: flex;
@@ -19,12 +24,21 @@
 
     &__logo-text {
         text-decoration: none;
+        font-family: $logo-font;
+        font-weight: 300;
+
+        &_eng {
+            font-weight: 600;
+        }
     }
 
     &__text {
         display: flex;
         width: 20vw;
         justify-content: space-between;
+        font-family: $default-font;
+        font-size: 0.8rem;
+        letter-spacing: 1.5px;
     }
 
     &__link {
