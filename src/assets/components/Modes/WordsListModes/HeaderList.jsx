@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './WordsList.scss';
 import './AddTheWord';
 import AddTheWord from './AddTheWord';
@@ -11,6 +11,8 @@ export default function HeaderList() {
         addTheWord.style.display = 'grid';
     }
 
+
+    
     return (
         <div className='containerWordList'>
 <section className='wordsList'>
@@ -23,8 +25,5 @@ export default function HeaderList() {
 {<AddTheWord/>}
 </section>
 </div>
-
-
-
     )
 }

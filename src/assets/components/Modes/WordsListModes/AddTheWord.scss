@@ -5,6 +5,10 @@
     background-color: $input-color;
     opacity: 0;
     animation: ani 1s forwards;
+
+    &__change {
+      display: grid;
+    }
   }
   
   @keyframes ani {
@@ -13,7 +17,12 @@
   }
 
   input {
+    font-family: $default-font;
     border-width: 0px;
+    height: 4vh;
+    width: 90%;
+    padding-left: 3%;
+    transition: box-shadow .5s;
   }
 
   input:focus {

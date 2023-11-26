@@ -68,15 +68,14 @@
             justify-content: center;
             align-items: center;
             position: absolute;
-            bottom: 38%;
-            right: 44%;
+            bottom: 23%;
+            right: 31%;
 
             transition-duration: 0.4s;
         }
 
         &__check:hover {
-            width: 11vw;
-            transition: all 0.4s ease;
+            transform: scale(1.1);
         }
         &__check:focus {
             outline: none;
@@ -84,7 +83,7 @@
         }
 
         &__answer-btn {
-            height: 5vw;
+        height: 5vw;
         width: 15vw;
         border: none;
         border-radius: 5px;
@@ -116,4 +115,19 @@
     
     .dontKnowBtn:hover {
         background-color: rgb(243, 55, 61);
+    }
+
+    .check-transition-enter {
+        opacity: 0;
+    }
+    .check-transition-enter-active {
+        opacity: 1;
+        transition: opacity 700ms;
+    }
+    .check-transition-exit {
+        opacity: 1;
+    }
+    .check-transition-exit-active {
+        opacity: 0;
+        transition: opacity 700ms;
     }

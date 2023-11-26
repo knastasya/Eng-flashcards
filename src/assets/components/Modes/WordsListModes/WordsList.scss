@@ -3,6 +3,13 @@
 .containerWordList {
     display: flex;
     justify-content: center;
+
+    &__hidden {
+        max-height: 0;
+        margin-top: -2px;
+        opacity: 0;
+        transition: 0.4s;
+    }
 }
 
 .wordsList {

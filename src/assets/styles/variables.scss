@@ -1,18 +1,18 @@
 @font-face {
-	font-family: "Montserrat";
-	src: url(../fonts/Montserrat-Regular.ttf);
+	font-family: 'Montserrat';
+	src: '../fonts/Montserrat-Regular.ttf';
     font-weight: 300;
 }
 
 @font-face {
-	font-family: "Montserrat";
-	src: url(../fonts/Montserrat-Regular.ttf);
+	font-family: 'Montserrat';
+	src: '../fonts/Montserrat-Regular.ttf';
     font-weight: 600;
 }
 
 @font-face {
-	font-family: "ArchivoBlack";
-	src: url(../fonts/ArchivoBlack-Regular.ttf);
+	font-family: 'ArchivoBlack';
+	src: '../fonts/ArchivoBlack-Regular.ttf';
 }
 
 $default-font: "Montserrat", sans-serif;
