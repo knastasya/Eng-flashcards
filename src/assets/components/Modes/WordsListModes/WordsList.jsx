@@ -12,25 +12,31 @@ import saveEdit from '../../../images/save.png';
 export default function WordsList(props) {
 
     const [editWordPressed, setEditWordPressed] = useState(false);
-
     const handleClick = () => {
         setEditWordPressed(!editWordPressed);
         };
 
-        const [deleteWordPressed, setDeleteWordPressed] = useState(false);
+    const [deleteWordPressed, setDeleteWordPressed] = useState(false);
+    const handleDelete = () => {
+        setDeleteWordPressed(true);
+        };
 
-        const handleDelete = () => {
-            setDeleteWordPressed(true);
-            };
+    const [cancelPressed, setCancelPressed] = useState(false);
+    const handleCancel = () => {
+        setCancelPressed(!cancelPressed);
+        }
 
-            const [inputValue, setInputValue] = useState('');
-              
-            const handleChange = (event) => {
-                setInputValue(event.target.value);
-                }
+     const [inputValue, setInputValue] = useState('');
+    const handleChange = (event) => {
+        setInputValue(event.target.value);
+        }
+
+
 
     return ( 
-        editWordPressed ?
+
+        editWordPressed && !cancelPressed ?
+
         <div className={deleteWordPressed ? 'containerWordList containerWordList__hidden' : 'containerWordList'}>
         <div className='wordsList'>
             <div className='wordsList__header addTheWord addTheWord__change'>
@@ -38,14 +44,16 @@ export default function WordsList(props) {
         <span className='wordsList__item'><input type='text' name='transcription' value={props.transcription} onChange = { handleChange }></input></span>
         <span className='wordsList__item'><input type='text' name='translation' value={props.russian} onChange = { handleChange }></input></span>
         <span className='wordsList__item wordsList__item_icon'>
-            <img className='wordsList__item_img' src={cancelEdit} alt='Отменить' title='Отменить'/>
+            <img className='wordsList__item_img' src={cancelEdit} alt='Отменить' title='Отменить' onClick={ handleCancel }/>
             <img className='wordsList__item_img' src={saveEdit} alt='Сохранить' title='Сохранить'/>
             <img className='wordsList__item_img' src={deleteWord} alt='Удалить слово' title='Удалить' onClick={ handleDelete }/>
         </span>
             </div>
         </div>
         </div>
-        : <>
+        :
+
+        <>
         <div className={deleteWordPressed ? 'containerWordList containerWordList__hidden' : 'containerWordList'}>
         <div className='wordsList'>
             <div className='wordsList__header'>
