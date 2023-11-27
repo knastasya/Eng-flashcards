@@ -26,41 +26,44 @@
 
         &__wordEng {
             position: absolute;
+            text-align: center;
             top: 34%;
-            right: 37%;
+            
         
-            font-family: $default-font;
-            font-size: calc(( 100vw + 1280px ) / 67);
+            font-family: $logo-font;
+            font-weight: 900;
+            font-size: calc(1.49254vw + 19.10448px);
+            color: rgb(87, 87, 87);
         }
 
         &__wordTrascrip {
             position: absolute;
-            right: 42%;
+            text-align: center;
             bottom: 40%;
 
-            font-size: calc(( 100vw - 142px) / 71);
+            font-family: $default-font;
+            font-size: calc(( 100vw + 1920px ) / 192);
             font-weight: 500;
             color: rgb(105, 105, 105);
         }
 
         &__wordRus {
             position: absolute;
-            right: 41%;
+            text-align: center;
             bottom: 25%;
 
-            font-size: calc(( 100vw - 142px) / 71);
+            font-family: $default-font;
+            font-size: calc(( 100vw + 2688px ) / 288);
             font-weight: 500;
             color: rgb(105, 105, 105);
         }
-
-
 
         &__check {
             background-color: $button-color;
             color: rgb(255, 255, 255);
             border: none;
             border-radius: 5px;
-            width: 10vw;
+            width: calc(( 100vw + 4224px ) / 38.4);
             height: 5vh;
             cursor: pointer;
 
@@ -69,7 +72,14 @@
             align-items: center;
             position: absolute;
             bottom: 23%;
-            right: 31%;
+            right: 32.5%;
+
+            font-family: $default-font;
+            font-weight: 500;
+            font-size: calc(( 100vw + 1536px ) / 288);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+
 
             transition-duration: 0.4s;
         }
@@ -96,13 +106,24 @@
         justify-content: space-between;
         align-items: center;
 
-        width: 45%;
+        width: 50%;
         margin-top: 2vw;
+    }
+
+    .knowBtn,
+    .dontKnowBtn {
+        width: calc(( 100vw + 803px ) / 10.4);
+        height: calc(( 100vw + 960px ) / 28.5);
+
+        font-family: $default-font;
+        font-weight: 600;
+        font-size: calc(( 100vw + 2112px ) / 288);
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
     }
 
     .knowBtn{
         background-color: rgb(169, 212, 198);
-        
     }
     
     .knowBtn:hover{

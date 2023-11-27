@@ -1,7 +1,5 @@
 @import '../../styles/variables.scss';
 
-
-
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -37,13 +35,18 @@
         width: 20vw;
         justify-content: space-between;
         font-family: $default-font;
-        font-size: 0.8rem;
+        font-size: calc(( 100vw + 2112px ) / 288);
+        font-weight: 600;
         letter-spacing: 1.5px;
     }
 
     &__link {
         text-decoration: none;
-        color: rgb(154, 0, 0);
+        color: $title-color;
+    }
+
+    &__link:hover {
+        color: $title-color-hover;
     }
 }
 
