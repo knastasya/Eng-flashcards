@@ -7,11 +7,9 @@ import page from '../../../images/page.png';
 
 export default function PracticeMode() {
 
-    const [CheckTheWord, setCheckTheWord] = useState('');
-
+    const [сheckTheWord, setCheckTheWord] = useState(false);
     const handleChange = () => {
-        const checkBtn = document.querySelector('.wordCard__check');
-        setCheckTheWord(CheckTheWord ? '' : (checkBtn.style.display = 'none'));
+        setCheckTheWord(!сheckTheWord);
     }
 
     return (
@@ -20,8 +18,8 @@ export default function PracticeMode() {
             <img className='wordCard__img' src={ page } alt="Карточка тетрадный лист" />
             <div className = "wordCard__wordEng">Hello</div>
             <div className = "wordCard__wordTrascrip">|həˈləʊ|</div>
-            <CSSTransition in = { CheckTheWord } timeout = { 1000 } classNames = "check-transition">
-            {CheckTheWord ? 
+            <CSSTransition in = { сheckTheWord } timeout = { 1000 } classNames = "check-transition">
+            {сheckTheWord ? 
             <div className = "wordCard__wordRus">Привет</div>
             : 
             <div>

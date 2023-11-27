@@ -5,9 +5,7 @@ import './AddTheWord.scss';
 import iconEdit from '../../../images/edit-word.png';
 import cancelEdit from '../../../images/cancel.png'
 import deleteWord from '../../../images/deleteworld.png';
-
 import saveEdit from '../../../images/save.png';
-
 
 export default function WordsList(props) {
 
@@ -18,7 +16,7 @@ export default function WordsList(props) {
 
     const [deleteWordPressed, setDeleteWordPressed] = useState(false);
     const handleDelete = () => {
-        setDeleteWordPressed(true);
+        setDeleteWordPressed(!deleteWordPressed);
         };
 
     const [cancelPressed, setCancelPressed] = useState(false);
@@ -26,7 +24,7 @@ export default function WordsList(props) {
         setCancelPressed(!cancelPressed);
         }
 
-     const [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState('');
     const handleChange = (event) => {
         setInputValue(event.target.value);
         }
