@@ -29,8 +29,6 @@ export default function WordsList(props) {
         setInputValue(event.target.value);
         }
 
-
-
     return ( 
 
         editWordPressed && !cancelPressed ?
