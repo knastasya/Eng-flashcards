@@ -10,28 +10,30 @@ import saveEdit from '../../../images/save.png';
 export default function WordsList(props) {
 
     const [editWordPressed, setEditWordPressed] = useState(false);
+    const [deleteWordPressed, setDeleteWordPressed] = useState(false);
+    const [cancelPressed, setCancelPressed] = useState(false);
+    const [inputValue, setInputValue] = useState('');
+
     const handleClick = () => {
         setEditWordPressed(!editWordPressed);
         };
 
-    const [deleteWordPressed, setDeleteWordPressed] = useState(false);
     const handleDelete = () => {
         setDeleteWordPressed(!deleteWordPressed);
+        setEditWordPressed(!editWordPressed);
         };
 
-    const [cancelPressed, setCancelPressed] = useState(false);
     const handleCancel = () => {
         setCancelPressed(!cancelPressed);
+        setEditWordPressed(!editWordPressed);
         }
 
-    const [inputValue, setInputValue] = useState('');
     const handleChange = (event) => {
         setInputValue(event.target.value);
         }
 
     return ( 
-
-        editWordPressed && !cancelPressed ?
+        editWordPressed ?
 
         <div className={deleteWordPressed ? 'containerWordList containerWordList__hidden' : 'containerWordList'}>
         <div className='wordsList'>
@@ -64,14 +66,5 @@ export default function WordsList(props) {
         </div>
         </div>
         </>
-        
-        
     )
 }
-
-
-
-
-
-
-

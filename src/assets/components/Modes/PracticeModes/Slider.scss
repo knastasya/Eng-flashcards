@@ -1,0 +1,54 @@
+@import '../../../styles/variables.scss'; 
+
+.Slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    width: 50%;
+    margin: auto;
+
+    &__container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    
+        margin: auto;
+        width: 80%;
+    }
+
+    &__page {
+        width: 67vh;
+        overflow: hidden;
+    }
+
+    &__frame {
+        position: relative;
+        display: flex;
+    
+        width: calc( 48vh * 9 );
+    
+        transition: all ease 1s;
+    }
+
+    &__button {
+        width: 8%;
+    
+        opacity: 0.7;
+        transition-duration: 0.3s;
+        cursor: pointer;
+    }
+
+    &__button:hover {
+        opacity: 1;
+        transition: opacity 0.3s;
+    }
+
+    &__button:active {
+        transform: scale(1.007);
+        transition: transform 0.3s;
+    }
+}
+
+
