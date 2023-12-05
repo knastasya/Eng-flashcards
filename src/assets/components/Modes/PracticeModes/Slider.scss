@@ -1,35 +1,29 @@
-@import '../../../styles/variables.scss'; 
-
 .Slider {
     display: flex;
     align-items: center;
     justify-content: space-around;
 
     width: 50%;
-    margin: auto;
+    margin: 12vh 0 5vh 0;
 
     &__container {
         display: flex;
-        justify-content: center;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-    
+
         margin: auto;
         width: 80%;
     }
 
     &__page {
-        width: 67vh;
-        overflow: hidden;
+        width: 38vw;
+        height: 50vh;
     }
 
     &__frame {
         position: relative;
         display: flex;
-    
-        width: calc( 48vh * 9 );
-    
-        transition: all ease 1s;
     }
 
     &__button {
@@ -50,5 +44,3 @@
         transition: transform 0.3s;
     }
 }
-
-

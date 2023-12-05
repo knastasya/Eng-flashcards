@@ -1,78 +1,73 @@
 @import '../../../styles/variables.scss'; 
 
-
 .practiceMode {
     background-color: rgba(255, 222, 222, 0.311);
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 0 0 8vw 0;
-    height: 100vh;
-
+    height: 88vh;
 }
+
 .wordCard {
-        position: relative;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        justify-content: space-around;
         align-items: center;
+        padding: 12vh 5% 22vh 5%;
     
-        width: 67vh;
-        height: 48vh;
+        width: 50vw;
+        height: 60vh;
     
         &__img{
+            position: absolute;
+            z-index: 0;
             height: 100%;
             padding: 5%;
+            width: 100%;
+            bottom: 8vh;
         }
 
         &__wordEng {
-            position: absolute;
-            text-align: center;
-            top: 34%;
-            
-        
             font-family: $logo-font;
             font-weight: 900;
             font-size: calc(( 100vw + 2112px ) / 115.2);
             color: rgb(87, 87, 87);
+            text-align: center;
+            z-index: 1;
         }
 
         &__wordTrascrip {
-            position: absolute;
-            text-align: center;
-            bottom: 40%;
-
             font-family: $default-font;
             font-size: calc(( 100vw + 1920px ) / 192);
             font-weight: 500;
             color: rgb(105, 105, 105);
+            z-index: 1;
         }
 
         &__wordRus {
-            position: absolute;
-            text-align: center;
-            bottom: 25%;
-
             font-family: $default-font;
             font-size: calc(( 100vw + 2688px ) / 288);
             font-weight: 500;
             color: rgb(105, 105, 105);
+            z-index: 1;
         }
 
         &__check {
-            background-color: $button-color;
-            color: rgb(255, 255, 255);
-            border: none;
-            border-radius: 5px;
-            width: calc(( 100vw + 4224px ) / 38.4);
-            height: 5vh;
-            cursor: pointer;
-
+            position: relative;
             display: flex;
             justify-content: center;
             align-items: center;
-            position: absolute;
-            bottom: 23%;
-            right: 32.5%;
+
+            width: calc(( 100vw + 4224px ) / 38.4);
+            height: 5vh;
+
+            background-color: rgb(169, 212, 198);
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1;
 
             font-family: $default-font;
             font-weight: 500;
@@ -80,12 +75,12 @@
             text-transform: uppercase;
             letter-spacing: 1.5px;
 
-
             transition-duration: 0.4s;
         }
 
         &__check:hover {
             transform: scale(1.1);
+            background-color: rgb(18, 164, 85)
         }
         &__check:focus {
             outline: none;
@@ -105,14 +100,13 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-
         width: 50%;
     }
 
     .knowBtn,
     .dontKnowBtn {
         width: calc(( 100vw + 803px ) / 10.4);
-        height: calc(( 100vw + 960px ) / 28.5);
+        height: calc(( 100vw + 1152px ) / 38.4);
 
         font-family: $default-font;
         font-weight: 600;

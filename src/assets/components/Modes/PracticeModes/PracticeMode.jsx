@@ -23,4 +23,3 @@ PracticeMode.defaultProps = {
     transcription: '|həˈləʊ|',
     russian: 'Привет'
 };
-
