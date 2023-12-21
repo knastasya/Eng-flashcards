@@ -1,0 +1,40 @@
+@import '../../styles/variables.scss';
+
+.NotFoundPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100vw;
+    height: 88vh;
+
+    font-family: $default-font;
+    font-size: calc(( 100vw + 1280px ) / 91);
+    color: rgb(65, 65, 65);
+
+    background-color: $background-error-color;
+
+    &__title {
+        margin: 9vh 0 7vh 0;
+    }
+
+    &__img {
+        margin-left: 2vw;
+        width: 35vw;
+    }
+
+    &__away {
+        margin-top: 2vh;
+    }
+
+    &__link {
+        text-decoration: underline;
+        color: rgb(65, 65, 65);
+        transition: color 0.3s;
+    }
+
+    &__link:hover{
+        color: $basic-color;
+        transition: color 0.3s;
+    }
+}
