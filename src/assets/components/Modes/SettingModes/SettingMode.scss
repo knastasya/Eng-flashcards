@@ -1,0 +1,35 @@
+@import "../../../styles/variables.scss";
+
+.SettingMode {
+    width: 70vw;
+    margin: auto;
+    padding: 10px 0;
+
+    font-family: $default-font;
+    text-align: justify;
+    color: rgb(87, 87, 87);
+
+    &__category {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        width: 100%;
+        margin: 2vh 0 2vh 0;
+    }
+
+    h1 {
+        margin: 2vh 0;
+        font-size: calc(( 100vw + 1536px ) / 144);
+        font-weight: 600;
+
+    }
+    p {
+        margin: 2vh 0;
+        padding-bottom: 1vh;
+        font-size: calc(( 100vw + 1152px ) / 192);
+        line-height: 150%;
+        letter-spacing: 0.4px;
+
+    }
+}

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './HeaderList'
 import './WordsList.scss'; 
 import './AddTheWord.scss'
