@@ -45,12 +45,16 @@
             z-index: 1;
         }
 
-        &__wordRus {
+        &__wordRus, &__learnedWords {
             font-family: $default-font;
             font-size: calc(( 100vw + 2688px ) / 288);
             font-weight: 500;
             color: rgb(105, 105, 105);
             z-index: 1;
+        }
+
+        &__learnedWords {
+            margin-bottom: 4vh;
         }
 
         &__check {
@@ -84,7 +88,8 @@
         }
         &__check:focus {
             outline: none;
-            background-color: rgb(23,61,143);
+            transform: scale(1.1);
+            background-color: rgb(18, 164, 85)
         }
 
         &__answer-btn {

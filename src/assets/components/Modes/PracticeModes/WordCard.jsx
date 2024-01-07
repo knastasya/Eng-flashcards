@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { forwardRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 
 import './PracticeMode.scss';
 import page from '../../../images/page.png';
 
-export default function WordCard (props) {
+const WordCard = forwardRef ((props, ref) => {
 
     const [сheckTheWord, setCheckTheWord] = useState(false);
-    const handleChange = () => {
+
+    const handleClick = () => {
         setCheckTheWord(!сheckTheWord);
+        props.setCheckCount(props.checkCount + 1);
     }
 
     return (
@@ -23,10 +26,12 @@ export default function WordCard (props) {
             <div className = "wordCard__wordRus">{props.russian}</div>
             : 
             <div>
-                <button className='wordCard__check' onClick={handleChange}>Проверить</button>
+                <button className='wordCard__check' onClick = { handleClick } ref = { ref }>Проверить</button>
             </div>}
             </CSSTransition>
             </div>
         </React.Fragment>
-    )
-}
+        );
+    });
+
+export default WordCard;
