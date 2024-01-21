@@ -1,18 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+
 import './WordsList.scss';
 import './AddTheWord.scss';
 
 import iconEdit from '../../../images/edit-word.png';
 import cancelEdit from '../../../images/cancel.png'
-import deleteWord from '../../../images/deleteworld.png';
+import deleteItem from '../../../images/deleteworld.png';
 import saveEdit from '../../../images/save.png';
 
+import WordsContext from '../../../providers/WordsContext';
+
+
 export default function WordsList(props) {
+
+    const [ wordsAPI, needRefresh, setNeedRefresh ] = useContext(WordsContext);
 
     const [editWordPressed, setEditWordPressed] = useState(false);
     const [deleteWordPressed, setDeleteWordPressed] = useState(false);
     const [cancelPressed, setCancelPressed] = useState(false);
     const [inputValue, setInputValue] = useState('');
+
 
     const handleClick = () => {
         setEditWordPressed(!editWordPressed);
@@ -32,6 +39,10 @@ export default function WordsList(props) {
         setInputValue(event.target.value);
         }
 
+        useEffect( () => {
+            setNeedRefresh(!needRefresh);
+        }, [] );
+
     return ( 
         editWordPressed ?
 
@@ -44,7 +55,7 @@ export default function WordsList(props) {
         <span className='wordsList__item wordsList__item_icon'>
             <img className='wordsList__item_img' src={cancelEdit} alt='Отменить' title='Отменить' onClick={ handleCancel }/>
             <img className='wordsList__item_img' src={saveEdit} alt='Сохранить' title='Сохранить'/>
-            <img className='wordsList__item_img' src={deleteWord} alt='Удалить слово' title='Удалить' onClick={ handleDelete }/>
+            <img className='wordsList__item_img' src={deleteItem} alt='Удалить слово' title='Удалить' onClick={ handleDelete }/>
         </span>
             </div>
         </div>
@@ -60,7 +71,7 @@ export default function WordsList(props) {
             <span className='wordsList__item'>{props.russian}</span>
         <span className='wordsList__item wordsList__item_icon'>
             <img className='wordsList__item_img' src={iconEdit} alt='Редактировать слово' title='Изменить' onClick={ handleClick }/>
-            <img className='wordsList__item_img' src={deleteWord} alt='Удалить слово' title='Удалить' onClick={ handleDelete }/>
+            <img className='wordsList__item_img' src={deleteItem} alt='Удалить слово' title='Удалить' onClick={ handleDelete }/>
         </span>
             </div>
         </div>
