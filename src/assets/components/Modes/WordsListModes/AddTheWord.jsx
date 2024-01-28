@@ -102,9 +102,9 @@ export default function AddTheWord() {
     return (
         <>
 <div className='wordsList__header addTheWord'>
-<span className='wordsList__item'><input type="text" value={addedWord.english} name='english' onChange={handleChangeInputs}/></span>
-<span className='wordsList__item'><input type="text" value={addedWord.transcription} name='transcription' onChange={handleChangeInputs}/></span>
-<span className='wordsList__item'><input type="text" value={addedWord.russian} name='russian' onChange={handleChangeInputs}/></span>
+<span className='wordsList__item'><input type="text" name='english' onChange={handleChangeInputs}/></span>
+<span className='wordsList__item'><input type="text" name='transcription' onChange={handleChangeInputs}/></span>
+<span className='wordsList__item'><input type="text" name='russian' onChange={handleChangeInputs}/></span>
 <div className='wordsList__item wordsList__item_btn'><button className = { totalEmptyInputState ?  'wordsList__btn disabled' : 'wordsList__btn'} 
 disabled = { totalEmptyInputState ? true : false } onClick = {saveChanges}>Сохранить</button></div>
 </div>

@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { observer } from 'mobx-react-lite';
+
 import './WordsList.scss';
 import './AddTheWord';
 import AddTheWord from './AddTheWord';
 
-export default function HeaderList() {
+const HeaderList = observer(( props ) => {
+    const wordsStore = props.wordsStore;
 
     const [addWordPressed, setAddWordPressed] = useState(false);
     const handleClick = () => {
@@ -19,8 +22,18 @@ export default function HeaderList() {
 <span className='wordsList__item'>Перевод</span>
 <div className='wordsList__item wordsList__item_btn'><button className='wordsList__btn' onClick={ handleClick }>Добавить слово</button></div>
 </div>
-{addWordPressed && <AddTheWord/>}
+{addWordPressed && 
+<AddTheWord
+    word = { '' }
+    transcription = { '' }
+    russian = { '' }
+    addWordPressed = { addWordPressed }
+    setAddWordPressed = { setAddWordPressed }
+    wordsStore = { wordsStore }
+    />}
 </section>
 </div>
     )
-}
+})
+
+export default HeaderList;

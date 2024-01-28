@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { observer } from 'mobx-react-lite';
+
 import './WordsList.scss';
 import './AddTheWord.scss';
 
@@ -7,12 +9,17 @@ import cancelEdit from '../../../images/cancel.png'
 import deleteWord from '../../../images/deleteworld.png';
 import saveEdit from '../../../images/save.png';
 
-export default function WordsList(props) {
+const WordsList = observer(( props ) => {
+
+    const wordsStore = props.wordsStore;
+
+    useEffect(() => wordsStore.refreshWordsAPI,
+    [ wordsStore.needRefresh ] );
 
     const [editWordPressed, setEditWordPressed] = useState(false);
     const [deleteWordPressed, setDeleteWordPressed] = useState(false);
     const [cancelPressed, setCancelPressed] = useState(false);
-    const [inputValue, setInputValue] = useState('');
+    const [inputValue, setInputValue] = useState(props);
 
     const handleClick = () => {
         setEditWordPressed(!editWordPressed);
@@ -38,9 +45,9 @@ export default function WordsList(props) {
         <div className={deleteWordPressed ? 'containerWordList containerWordList__hidden' : 'containerWordList'}>
         <div className='wordsList'>
             <div className='wordsList__header addTheWord addTheWord__change'>
-        <span className='wordsList__item'><input type='text' name='word' value={props.english} onChange = { handleChange }></input></span>
-        <span className='wordsList__item'><input type='text' name='transcription' value={props.transcription} onChange = { handleChange }></input></span>
-        <span className='wordsList__item'><input type='text' name='translation' value={props.russian} onChange = { handleChange }></input></span>
+        <span className='wordsList__item'><input type='text' name='word' value={inputValue.english} onChange = { handleChange }></input></span>
+        <span className='wordsList__item'><input type='text' name='transcription' value={inputValue.transcription} onChange = { handleChange }></input></span>
+        <span className='wordsList__item'><input type='text' name='translation' value={inputValue.russian} onChange = { handleChange }></input></span>
         <span className='wordsList__item wordsList__item_icon'>
             <img className='wordsList__item_img' src={cancelEdit} alt='Отменить' title='Отменить' onClick={ handleCancel }/>
             <img className='wordsList__item_img' src={saveEdit} alt='Сохранить' title='Сохранить'/>
@@ -67,4 +74,6 @@ export default function WordsList(props) {
         </div>
         </>
     )
-}
+})
+
+export default WordsList;
